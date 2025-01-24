@@ -1,0 +1,1 @@
+Enables the option to add an HTML and displays it as a popup in the website.

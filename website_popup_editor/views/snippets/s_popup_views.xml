@@ -1,0 +1,14 @@
+<odoo>
+
+    <template id="s_popup_inherit" inherit_id="website.s_popup" name="Custom Popup Inheritance">
+        <xpath expr="//section[@data-snippet='s_banner']" position="attributes">
+            <attribute name="t-if">not res_company.popup_html_code</attribute>
+        </xpath>
+        <xpath expr="//section[@data-snippet='s_banner']" position="before">
+            <section t-if="res_company.popup_html_code">
+                <t t-out="res_company.get_popup_html_code()"/>
+            </section>
+        </xpath>
+    </template>
+    
+</odoo>
